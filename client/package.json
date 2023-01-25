@@ -6,12 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "cy:test": "cypress run --component --spec \"cypress/components/testingComponent.cy.js\""
   },
   "dependencies": {
     "@next/font": "13.1.5",
     "next": "13.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "cypress": "^12.4.0"
   }
 }
+
+
