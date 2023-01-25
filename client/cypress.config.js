@@ -4,6 +4,7 @@ module.exports = {
   projectId: "63bwf8",
 };
 
+
 module.exports = defineConfig({
   component: {
     devServer: {
