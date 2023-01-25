@@ -1,13 +1,11 @@
 const { defineConfig } = require("cypress");
 
-module.exports = defineConfig({
-  component: {
-    devServer: {
-      framework: "next",
-      bundler: "webpack",
-    },
-  },
+module.exports = {
+  projectId: "63bwf8",
+};
 
+
+module.exports = defineConfig({
   component: {
     devServer: {
       framework: "next",
