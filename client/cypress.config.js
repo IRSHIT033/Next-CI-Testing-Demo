@@ -10,8 +10,5 @@ module.exports = defineConfig({
       framework: "next",
       bundler: "webpack",
     },
-    e2e: {
-      baseUrl: "http://localhost:3000",
-    },
   },
 });
