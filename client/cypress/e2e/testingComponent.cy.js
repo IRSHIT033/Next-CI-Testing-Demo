@@ -1,14 +1,13 @@
 /// <reference types="cypress" />
-import Main from "@/Components/Main";
 
 const result_el = "input[name='result']";
 const first_operand_el = "#firstOperand";
 const second_operand_el = "#secondOperand";
 const show_res_btn = "#show_res_btn";
 
-describe("<Main>", () => {
+describe("Testing main module", () => {
   beforeEach(() => {
-    cy.mount(<Main />);
+    cy.visit("localhost:3000");
   });
 
   it("should show empty string in sum result by default", () => {

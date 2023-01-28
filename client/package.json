@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "cy:open":"cypress open",
     "cy:test": "cypress run --component --spec \"cypress/components/testingComponent.cy.js\""
   },
   "dependencies": {
