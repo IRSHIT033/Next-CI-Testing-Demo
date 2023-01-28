@@ -10,7 +10,7 @@ describe("Testing main module", () => {
     cy.visit("localhost:3000");
   });
 
-  it("should show empty string in sum result by default", () => {
+  it("should show empty string in result by default", () => {
     cy.get(result_el).should("have.value", "");
   });
 
