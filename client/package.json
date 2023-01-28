@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cy:test": "cypress run --component --spec \"cypress/components/testingComponent.cy.js\""
+    "cy:open":"cypress open",
+    "cy:run": "cypress run --component --record --key dce60e89-91dd-44f2-bd57-569bb244cd3d"
   },
   "dependencies": {
     "@next/font": "13.1.5",

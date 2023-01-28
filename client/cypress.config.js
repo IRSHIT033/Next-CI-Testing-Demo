@@ -1,17 +1,11 @@
 const { defineConfig } = require("cypress");
 
-module.exports = {
-  projectId: "63bwf8",
-};
-
 module.exports = defineConfig({
+  projectId: "63bwf8",
   component: {
     devServer: {
       framework: "next",
       bundler: "webpack",
-    },
-    e2e: {
-      baseUrl: "http://localhost:3000",
     },
   },
 });
