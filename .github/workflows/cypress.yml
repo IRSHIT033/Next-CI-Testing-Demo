@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 'Deploying on vercel'
-      working-directory: ./client
+      uses: amondnet/vercel-action@v20
       run: |
           prodRun=""
           if [[ ${GITHUB_REF} == "refs/heads/main" ]]; then
