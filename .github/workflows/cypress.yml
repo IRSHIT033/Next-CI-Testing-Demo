@@ -43,7 +43,7 @@ jobs:
     if: ${{ success() }}
     runs-on: ubuntu-latest
     steps:
-    - name: "Deploy application"
+     - name: "Deploy application"
        run: |
          prodRun=""
          if [[ ${GITHUB_REF} == "refs/heads/main" ]]; then
