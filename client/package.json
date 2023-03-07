@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "cy:open":"cypress open",
-    "cy:test": "cypress run --component --spec \"cypress/components/testingComponent.cy.js\""
+    "cy:test": "cypress run --e2e --spec \"cypress/e2e/testingComponent.cy.js\""
   },
   "dependencies": {
     "@next/font": "13.1.5",
