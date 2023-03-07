@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Main = () => {
-  const [firstOperand, setfirstOperand] = useState("2");
+  const [firstOperand, setfirstOperand] = useState("");
   const [SecondOperand, setSecondOperand] = useState("");
   const [ans, setans] = useState("");
   const getSum = () => {
