@@ -40,9 +40,14 @@ jobs:
   deploy:
     needs: cypress-run
     if: ${{ success() }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: vercel/action@v21
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          vercel_token: ${{ secrets.VERCEL_TOKEN }}
+    run: |
+          prodRun=""
+          if [[ ${GITHUB_REF} == "refs/heads/main" ]]; then
+            prodRun="--prod"
+          fi
+
+          npx vercel --token ${VERCEL_TOKEN} $prodRun
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
