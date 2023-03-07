@@ -44,8 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 'Deploying on vercel'
-      with:
-          working-directory: ./client
+      working-directory: ./client
       run: |
           prodRun=""
           if [[ ${GITHUB_REF} == "refs/heads/main" ]]; then
