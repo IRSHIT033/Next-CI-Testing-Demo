@@ -37,3 +37,12 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Creating a token https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  deploy:
+    needs: cypress-run
+    if: ${{ success() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: vercel/action@v21
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          vercel_token: ${{ secrets.VERCEL_TOKEN }}
