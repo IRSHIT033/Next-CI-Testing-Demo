@@ -44,8 +44,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: Deploy to Vercel
-        uses: vercel/action@v21
-        with:
+       uses: vercel/action@v21
+       with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
